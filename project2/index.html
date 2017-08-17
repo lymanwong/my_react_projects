@@ -16,12 +16,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-3">React Examples</h1>
         <p class="lead">This is a list of React component examples.</p>
       </div>
     </div>
+
+    <!-- Stateless Component -->
     <div class="container-fluid">
       <div class="card">
         <div class="card-header">
@@ -31,6 +34,7 @@
         </div>
       </div>
 
+      <!-- Prop card -->
       <div class="card">
         <div class="card-header">
           Passing a Prop into a React Component
@@ -39,6 +43,7 @@
         </div>
       </div>
 
+      <!-- Click Alert Button -->
       <div class="card">
         <div class="card-header">
           Click Alerts with Events
@@ -47,6 +52,16 @@
         </div>
       </div>
 
+      <!-- Checkbox -->
+      <div class="card">
+        <div class="card-header">
+          Change of state
+        </div>
+        <div class="card-body" id="changeState">
+        </div>
+      </div>
+
+      <!-- PostIt -->
       <div class="card">
         <div class="card-header">
           Note
@@ -100,14 +115,54 @@
         }
       }
 
+      class Checkbox extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {checked:false};
+          this.toggleCheckbox = this.toggleCheckbox.bind(this);
+        }
+
+        toggleCheckbox(){
+          const newState = this.state.checked == true ? false : true;
+          this.setState({checked:newState})
+        }
+
+        render() {
+          var msg
+
+          if(this.state.checked){
+            msg = "checked"
+          } else {
+            msg = "unchecked"
+          }
+
+          return (
+            <div>
+              <p>Click on the checkbox to see the state change.</p>
+              <input type="checkbox" onChange={this.toggleCheckbox} />
+              <p></p>
+              <p>This box is {msg}.</p>
+            </div>
+          )
+        }
+      }
+
       class Note extends React.Component {
+        edit() {
+          alert("Editing note...");
+        }
+
+        remove() {
+          alert("Removing note...");
+        }
+
         render() {
           return (
             <div className="note">
-              <p></p>
+              <p>{this.props.children}</p>
               <span>
-              <button>Edit</button>
-              <button>X</button>
+              <button onClick={this.edit}>Edit</button>
+              <button onClick={this.remove}>X</button>
               </span>
             </div>
           )
@@ -130,7 +185,12 @@
       );
 
       ReactDOM.render(
-        <Note />,
+        <Checkbox />,
+        document.getElementById('changeState')
+      );
+
+      ReactDOM.render(
+        <Note>Hello World</Note>,
         document.getElementById('myNote')
       );
     </script>
