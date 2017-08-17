@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://fb.me/react-15.2.1.js"></script>
+    <script src="https://fb.me/react-dom-15.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">React Examples</h1>
+        <p class="lead">This is a list of React component examples.</p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-header">
+          Stateless React Component
+        </div>
+        <div class="card-body" id="stateless">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Passing a Prop into a React Component
+        </div>
+        <div class="card-body" id="props">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Click Alerts with Events
+        </div>
+        <div class="card-body" id="myEvent">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Note
+        </div>
+        <div class="card-body" id="myNote" style="height:200px;">
+        </div>
+      </div>
+    </div> <!-- End Container -->
+
+
+    <script type="text/babel">
+      const Stateless = () => {
+        return (
+          <div>
+            <p>You can't tell, but I'm a stateless component</p>
+            <p>I'm basically a function that returns a React element.</p>
+          </div>
+        )
+      }
+
+      class MyProps extends React.Component {
+        render() {
+          return(
+            <div>
+              <h1></h1>
+              <p>I'm passing my name, {this.props.name}, to this React component by using this.props.name.</p>
+            </div>
+          )
+        }
+      }
+
+      class Alerting extends React.Component {
+        left() {
+          alert("You clicked the left button.")
+        }
+
+        right() {
+          alert("You clicked the right button.")
+        }
+
+        render(){
+          return (
+            <div>
+              <p>This is an example of a click event triggering an alert.</p>
+              <button onClick={this.left} className="btn btn-primary">Click Me!</button>
+              <button onClick={this.right} className="btn btn-danger">Click Me too!</button>
+              <p></p>
+              <p>I am also using className to style the buttons.</p>
+            </div>
+          )
+        }
+      }
+
+      class Note extends React.Component {
+        render() {
+          return (
+            <div className="note">
+              <p></p>
+              <span>
+              <button>Edit</button>
+              <button>X</button>
+              </span>
+            </div>
+          )
+        }
+      }
+
+      ReactDOM.render(
+        <Stateless />,
+        document.getElementById('stateless')
+      );
+
+      ReactDOM.render(
+        <MyProps name="Lyman" />,
+        document.getElementById('props')
+      );
+
+      ReactDOM.render(
+        <Alerting />,
+        document.getElementById('myEvent')
+      );
+
+      ReactDOM.render(
+        <Note />,
+        document.getElementById('myNote')
+      );
+    </script>
+  </body>
+</html>
