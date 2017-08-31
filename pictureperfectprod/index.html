@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Picture Perfect by Ivon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Picture Perfect by Ivon">
+    <meta name="keywords" content="Makeup">
+    <meta name="author" content="Lyman Wong">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src='js/camera.js'></script>
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+
+    <script>
+        $(window).load( function(){
+
+             jQuery('.camera_wrap').camera();
+
+        });
+    </script>
+    <!--[if lt IE 9]>
+      <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+      <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
+      <script src="assets/assets/js/html5shiv.js"></script>
+      <script src="assets/assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div id="container">
+  </div>
+
+  <script type="text/babel">
+  var { Router,
+        Route,
+        IndexRoute,
+        IndexLink,
+        hashHistory,
+        Link } = ReactRouter;
+
+  var Home = React.createClass({
+    render: function(){
+      return (
+        <div id="content">
+
+            {/*==============================slider=================================*/}
+            <div className="slider">
+                <div className="camera_wrap">
+                  <div data-src="http://lymanwong.com/images/vianett2.jpg"></div>
+                  <div data-src="http://lymanwong.com/images/edie.jpg"></div>
+                  <div data-src="http://lymanwong.com/images/gazers.jpg"></div>
+                </div>
+            </div>
+            {/*==============================row1=================================*/}
+            <div className="row_1">
+                <div className="container">
+                    <p className="title1">Welcome to Picture Perfect by Ivon</p>
+                    <p className="title2">Making people beautiful in the Bay Area</p>
+                    <Link to="bio" className="btn btn-default btn-lg btn1">more</Link>
+                </div>
+            </div>
+            {/*==============================row2=================================*/}
+            <div className="row_2">
+                <div className="container">
+                    <div className="row">
+                        <ul className="list1">
+                            <li className="col-lg-4 col-md-4 col-sm-4 listbox1">
+                                <div className="box1">
+                                    <Link to="gallery">
+                                        <figure><img src="http://lymanwong.com/images/olymp.jpg" alt="" /></figure>
+                                        <p>Celebrities</p>
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="col-lg-4 col-md-4 col-sm-4 listbox2">
+                                <div className="box2">
+                                    <Link to="gallery">
+                                        <p>Photoshoots</p>
+                                        <figure><img src="http://lymanwong.com/images/monique2.jpg" alt="" /></figure>
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="col-lg-4 col-md-4 col-sm-4 listbox3">
+                                <div className="box3">
+                                    <Link to="gallery">
+                                        <figure><img src="http://lymanwong.com/images/sunflower.jpg" alt="" /></figure>
+                                        <p>Film</p>
+                                    </Link>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/*==============================row3=================================*/}
+            <div className="row_3">
+                <div className="container">
+                    <div className="row">
+                        <ul className="list3">
+                            <li className="col-lg-6 col-md-6 col-sm-6">
+                                <div className="box4">
+                                    <figure><img src="img/page1_img4.jpg" alt="" /></figure>
+                                    <div className="info1 maxheight">
+                                        <p className="list3title1">Nature</p>
+                                        <p className="list3title2">Migytafsas deuauyt asares</p>
+                                        <p className="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+                                        <a href="#" className="btn-link btn-link1">learn more<span></span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="col-lg-6 col-md-6 col-sm-6">
+                                <div className="box4">
+                                    <figure><img src="img/page1_img5.jpg" alt="" /></figure>
+                                    <div className="info1 maxheight">
+                                        <p className="list3title1">Cities</p>
+                                        <p className="list3title2">Btreasas lisemeyta siqades</p>
+                                        <p className="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+                                        <a href="#" className="btn-link btn-link1">learn more<span></span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="col-lg-6 col-md-6 col-sm-6">
+                                <div className="box4">
+                                    <figure><img src="img/page1_img6.jpg" alt="" /></figure>
+                                    <div className="info1 maxheight">
+                                        <p className="list3title1">Portraits</p>
+                                        <p className="list3title2">Dolore nuyfasa kerytertas</p>
+                                        <p className="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+                                        <a href="#" className="btn-link btn-link1">learn more<span></span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="col-lg-6 col-md-6 col-sm-6">
+                                <div className="box4">
+                                    <figure><img src="img/page1_img7.jpg" alt="" /></figure>
+                                    <div className="info1 maxheight">
+                                        <p className="list3title1">Fashion</p>
+                                        <p className="list3title2">Fertyuasa mietyas lteasas</p>
+                                        <p className="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+                                        <a href="#" className="btn-link btn-link1">learn more<span></span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/*==============================row4=================================*/}
+            <div className="row_4">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-4 col-sm-4 chef row4_col">
+                            <h2>About Me</h2>
+                            <figure><img src="http://lymanwong.com/images/ivonworking.jpg" alt="" /></figure>
+                            <p className="title3">Ivon Hernandez Garcia</p>
+                            <p>I attended The Academy for Salon Professionals where I received top of the line training in Dermalogica. </p>
+                            <p className="m_bot1">Attended regular private training at the Dermalogica Institute in San Francisco. I am a licenced Esthetician with a passion for Makeup Artistry!</p>
+                            <Link to="bio" className="btn-link btn-link2">read more<span></span></Link>
+                        </div>
+                        <div className="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 row4_col">
+                            <h2>Latest Services</h2>
+                            <ul className="list2">
+                                <li><a href="#">muygasa kausyse</a></li>
+                                <li><a href="#">nuyatsas lasras batsas </a></li>
+                                <li><a href="#">kiaustyas</a></li>
+                                <li><a href="#">batresa ksate</a></li>
+                                <li><a href="#">Grerhasa mero</a></li>
+                                <li><a href="#">Lanytadas nyats</a></li>
+                                <li><a href="#">nuyatsas lasras batsas</a></li>
+                                <li><a href="#">batresa </a></li>
+                            </ul>
+                        </div>
+                        <div className="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 locations row4_col">
+                            <h2>Location</h2>
+                            <figure><img className="logofooter" src="img/logo2.png" alt="" /></figure>
+                            <p className="title4">Making people beautiful in the Bay Area</p>
+                            <hr className="line1" />
+                            <a href="mailto:ivong2000@gmail.com?subject=Mail from your website" className="btn-link btn-link3"><span></span>ivong2000@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      )
+    }
+  });
+
+  var Bio = React.createClass({
+    render(){
+        return (
+        <div id="content">
+            {/*==============================row5=================================*/}
+            <div className="row_5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-7 col-md-7 col-sm-7 reserve_table">
+                            <h2>My Short Bio</h2>
+                            <figure><img className="selfie" src="http://lymanwong.com/images/ivonself.jpg" alt=""/></figure>
+                            <h3>I attended The Academy for Salon Professionals where I received top of the line training in Dermalogica.</h3>
+                            <p>Attended regular private training at the Dermalogica Institute in San Francisco. I am a licenced Esthetician with a passion for Makeup Artistry!</p>
+                            <p>I've done makeup for celebrities, photoshoots, short films, fashion runways, weddings and more! I can also teach you how to apply makeup to look your best.</p>
+
+
+                            <h2 className="pad_top1">My Experience</h2>
+                            <h3>Celebrities</h3>
+                            <p>Mariya Koroleva, 2012 U.S. Synchronized Swimming Olympian - 2012</p>
+                            <br/><br/>
+
+                            <h3>Films and Videos</h3>
+                            <p>BFF Club short film 2012</p>
+                            <p>We want Electro video 2011</p>
+                            <br/><br/>
+
+                            <h3>Fashion Photoshoots</h3>
+                            <p>From Sometime Else 2013</p>
+                            <p>My Darling Blue Eyes 2013</p>
+                            <p>Monique photoshoot 2013</p>
+                            <p>Regal Seperation 2013</p>
+                            <p>San Francisco photoshoot 2013</p>
+                            <p>40's and Lady Bird 2012</p>
+                            <p>Edie Sedgwick 2012</p>
+                            <p>Flower Gazers 2012</p>
+                            <p>Life in Digital 2012</p>
+                            <p>Six-Teas 2012</p>
+                            <p>Sunflower Dances 2012</p>
+                            <p>Vianett Bridal Store 2011-2012</p>
+                            <p>Dia de Los Muertos 2011</p>
+                            <p>Monterey photoshoot 2011</p>
+                            <p>Pin up photoshoot 2011</p>
+                            <br/><br/>
+
+                            <h3>Weddings and Events</h3>
+                            <p>Michelle and Jason's Wedding 2016</p>
+                            <p>Cassie and Patrick's Wedding 2014</p>
+                            <p>Richardson Wedding 2014</p>
+                            <p>Bianca's Quinceanera 2011</p>
+                        </div>
+
+                        <div className="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-4 col-md-4 col-sm-4">
+                            <h2>How I Work</h2>
+                            <hr className="line2" />
+                            <p className="title5">I love what I do and it shows.</p>
+                            <h2 className="pad_bot1">Hire Me Now</h2>
+                                <form id="contact-form2" className="reservation-form">
+                                  <div className="success">Reservation form submitted! <strong>We will be in touch soon.</strong> </div>
+                                  <fieldset>
+                                    <div className="coll-1">
+                                      <div className="txt-form">Name<span></span></div>
+                                      <label className="name">
+                                        <input type="text" value="Name:"/><br/>
+                                        <span className="error">*This is not a valid name.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="coll-2">
+                                      <div className="txt-form">Email<span>:</span></div>
+                                      <label className="email">
+                                        <input type="email" value="E-mail:"/><br/>
+                                        <span className="error">*This is not a valid email address.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="coll-3">
+                                      <div className="txt-form">phone:</div>
+                                      <label className="arrival notRequired">
+                                        <input type="tel" value="Phone:"/><br/>
+                                        <span className="error">*This is not a valid phone number.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="coll-4">
+                                      <div className="txt-form">phone:</div>
+                                      <label className="Length of stay notRequired">
+                                        <input type="tel" value="Fax:"/><br/>
+                                        <span className="error">*This is not a valid phone number.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="clear"></div>
+                                    <div>
+                                      <div className="txt-form">Comment<span>*</span></div>
+                                      <label className="message">
+                                        <textarea>Comments:</textarea><br/>
+                                        <span className="error">*The message is too short.</span> <span className="empty">*This field is required.</span>
+                                      </label>
+                                    </div>
+                                    <div className="clear"></div>
+                                  </fieldset>
+                                  <div className="buttons-wrapper clearfix">
+                                    <a href="#" className="btn-link btn-link2" data-type="submit">send<span></span></a>
+                                    <a href="#" className="btn-link btn-link2" data-type="reset">clear<span></span></a>
+                                  </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        )
+    }
+  });
+
+  var Gallery = React.createClass({
+    render(){
+        return (
+            <div id="content">
+                {/*--==============================row6=================================--*/}
+                <div className="row_6">
+                    <div className="container">
+                        <h2 className="pad_bot3">Gallery Overview</h2>
+                        <div className="row">
+                            <div className="col-lg-12 col-md-12 col-sm-12">
+                              <div id="options" className="clearfix">
+                                  <ul id="filters" className="pagination option-set clearfix" data-option-key="filter">
+                                    <li><a href="#filter" data-option-value="*" className="selected">Show all</a></li>
+                                    <li><a href="#filter" data-option-value=".celebrities">celebrities</a></li>
+                                    <li><a href="#filter" data-option-value=".people">people</a></li>
+                                    <li><a href="#filter" data-option-value=".weddings ">weddings</a></li>
+                                    <li><a href="#filter" data-option-value=".photoshoots">photoshoots</a></li>
+                                    <li><a href="#filter" data-option-value=".film">film</a></li>
+                                    <li><a href="#filter" data-option-value=".art">art</a></li>
+                                  </ul>
+                              </div>{/*-- #options --*/}
+                              <div className="containerExtra">
+                              <div id="container" className="clearfix">
+
+                              {/*-- Celebrities --*/}
+                                <div className="element transition celebrities" data-category="transition">
+                                    <a href="http://lymanwong.com/images/olymp.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/olymp.jpg" alt=""/></figure></a><span className="description">Mariya Koroleva, 2012 U.S. Olympian</span>
+                                </div>
+                                <div className="element transition celebrities" data-category="transition">
+                                    <a href="http://lymanwong.com/images/mariya2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/mariya2.jpg" alt=""/></figure></a><span className="description">Mariya Koroleva, 2012 U.S. Olympian </span>
+                                </div>
+                                <div className="element transition celebrities" data-category="transition">
+                                    <a href="http://lymanwong.com/images/mariya.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/mariya.jpg" alt=""/></figure></a><span className="description">Mariya with the crew</span>
+                                </div>
+
+                                {/*-- People --*/}
+                                <div className="element transition people" data-category="transition">
+                                    <a href="http://lymanwong.com/images/girl3.jpg"><figure className="img-polaroid"><img src="http://lymanwong.com/images/girl3.jpg" alt=""/></figure></a><span className="description">Natural glow and contour on this beauty, bold lip. 💋</span>
+                                </div>
+                                <div className="element transition people" data-category="transition">
+                                    <a href="http://lymanwong.com/images/girl2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/girl2.jpg" alt=""/></figure></a><span className="description">Thanks to this beauty, smoky eyes with purples and browns.</span>
+                                </div>
+
+                                {/*-- Weddings --*/}
+                                <div className="element transition weddings" data-category="transition">
+                                    <a href="http://lymanwong.com/images/jason1.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/jason1.jpg" alt=""/></figure></a><span className="description">Michelle and Jason's Wedding</span>
+                                </div>
+                                <div className="element transition weddings" data-category="transition">
+                                    <a href="http://lymanwong.com/images/jason2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/jason2.jpg" alt=""/></figure></a><span className="description">Michelle and Jason's Wedding</span>
+                                </div>
+
+                                <div className="element transition weddings" data-category="transition">
+                                    <a href="http://lymanwong.com/images/wedding.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/wedding.jpg" alt=""/></figure></a><span className="description">Wedding</span>
+                                </div>
+
+                                <div className="element transition weddings" data-category="weddings">
+                                    <a href="http://lymanwong.com/images/cassie.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/cassie.jpg" alt=""/></figure></a><span className="description">Cassie and Patrick's Wedding</span>
+                                </div>
+                                <div className="element transition weddings" data-category="transition">
+                                    <a href="http://lymanwong.com/images/cassie2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/cassie2.jpg" alt=""/></figure></a><span className="description">Cassie and Patrick's Wedding</span>
+                                </div>
+
+
+                                {/*-- Photoshoots --*/}
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/vianett.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/vianett.jpg" alt=""/></figure></a><span className="description">Vianett Bridal Store</span>
+                                </div>
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/vianett2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/vianett2.jpg" alt=""/></figure></a><span className="description">Vianett Bridal Store</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/edie.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/edie.jpg" alt=""/></figure></a><span className="description">Edie Sedgwick photoshoot</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/monique.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/monique.jpg" alt=""/></figure></a><span className="description">Monique photoshoot</span>
+                                </div>
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/monique2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/monique2.jpg" alt=""/></figure></a><span className="description">Monique photoshoot</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/sometime2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/sometime2.jpg" alt=""/></figure></a><span className="description">Six-Teas photoshoot</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/sometime.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/sometime.jpg" alt=""/></figure></a><span className="description">From Sometime Else photoshoot</span>
+                                </div>
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/sometime3.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/sometime3.jpg" alt=""/></figure></a><span className="description">From Sometime Else photoshoot</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/sunflower.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/sunflower.jpg" alt=""/></figure></a><span className="description">Sunflower Dances photoshoot</span>
+                                </div>
+
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/flowergazers.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/flowergazers.jpg" alt=""/></figure></a><span className="description">Flower Gazers photoshoot</span>
+                                </div>
+                                <div className="element transition photoshoots" data-category="transition">
+                                    <a href="http://lymanwong.com/images/gazers.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/gazers.jpg" alt=""/></figure></a><span className="description">Flower Gazers photoshoot</span>
+                                </div>
+
+                                {/*-- Film --*/}
+                                <div className="element transition film" data-category="transition">
+                                    <a href="http://lymanwong.com/images/bffclub.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/bffclub.jpg" alt=""/></figure></a><span className="description">BFF Short Film</span>
+                                </div>
+                                <div className="element transition film" data-category="transition">
+                                    <a href="http://lymanwong.com/images/bff2.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/bff2.jpg" alt=""/></figure></a><span className="description">BFF Short Film</span>
+                                </div>
+
+                                {/*-- Art --*/}
+                                <div className="element transition art" data-category="transition">
+                                    <a href="http://lymanwong.com/images/dod_ivon.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/dod_ivon.jpg" alt=""/></figure></a><span className="description">Day of the Dead</span>
+                                </div>
+                                <div className="element transition art" data-category="transition">
+                                    <a href="http://lymanwong.com/images/dod2.jpg"><figure className="img-polaroid"><img src="http://lymanwong.com/images/dod2.jpg" alt=""/></figure></a><span className="description">Day of the Dead</span>
+                                </div>
+                                <div className="element transition art" data-category="transition">
+                                    <a href="http://lymanwong.com/images/stein.jpg" className="thumb"><figure className="img-polaroid"><img src="http://lymanwong.com/images/stein.jpg" alt=""/></figure></a><span className="description">First time creating a Frankenstein look! I think it came out great.</span>
+                                </div>
+                           </div>
+                           </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+  });
+
+  var Links = React.createClass({
+    render(){
+        return (
+            <div id="content">
+                {/*--==============================row7=================================--*/}
+                <div className="row_7">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-8 col-md-8 col-sm-8">
+                                <h2 className="pad_bot2">Useful Links</h2>
+                                <div className="row links">
+                                  <div className="col-lg-6 col-md-6 col-sm-6">
+                                        <h3><a className="btn-link4" href="#">www.demolink.org</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Ilo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Ilo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.</p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.</p>
+                                  </div>
+                                  <div className="col-lg-6 col-md-6 col-sm-6">
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Ilo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Ilo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.</p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. </p>
+                                        <h3><a className="btn-link4"  href="#">www.demolink.org</a></h3>
+                                        <p>Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. </p>
+                                  </div>
+                                </div>
+                           </div>
+                            <div className="col-lg-4 col-md-4 col-sm-4">
+                                <h2>Friends Links</h2>
+                                <ul className="list2">
+                                    <li><a href="#">Praesent vestibulum molestie lacus</a></li>
+                                    <li><a href="#">Aenean nonummy hend mauris Phaselus</a></li>
+                                    <li><a href="#">porta. Fusce suscipit varius mi</a></li>
+                                    <li><a href="#">Cum sociis natoque penatibus et</a></li>
+                                    <li><a href="#">magnis dis parturient montes nasc</a></li>
+                                    <li><a href="#">Fusce feugiat malesuada odio</a></li>
+                                    <li><a href="#">Morbi nunc odio gravida at cursus</a></li>
+                                    <li><a href="#">Maecenas tristique orci ac sem</a></li>
+                                    <li><a href="#">Duis ultricies pharetra magna</a></li>
+                                    <li><a href="#">Donec accumsan malesuada orci</a></li>
+                                    <li><a href="#">Lorem ipsum dolor sit ame</a></li>
+                                </ul>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+  });
+
+  var Location = React.createClass({
+    render(){
+        return (
+            <div id="content">
+                {/*--==============================row8=================================--*/}
+                <div className="row_8">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 col-md-12 col-sm-12 gmap">
+                              <div className="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98568989686!2d-122.50781180290305!3d37.75781489480267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1503954067763"></iframe></div>
+
+                            </div>
+                         </div>
+                         <div className="row">
+                            <div className="col-lg-4 col-md-4 col-sm-4 address">
+                                <h2>Postal Address</h2>
+                                <address>
+                                    <div className="info">
+                                        <strong>Serving the Bay Area</strong>
+                                        <p><span>Telephone:</span> +1 408 910 1234</p>
+                                        <p><span>Email:</span><a href="mailto:ivong2000@gmail.com?subject=Mail from your website" className="btn-link btn-link3">ivong2000@gmail.com</a></p>
+                                    </div>
+                                </address>
+                            </div>
+                            <div className="col-lg-8 col-md-8 col-sm-8 address">
+                                <h2>Contact Form</h2>
+                                <form id="contact-form" className="contact-form">
+                                  <div className="success"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+                                  <fieldset>
+                                    <div className="coll-1">
+                                      <div className="txt-form">Name<span>*</span></div>
+                                      <label className="name">
+                                        <input type="text" value="Name*:"/><br/>
+                                        <span className="error">*This is not a valid name.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="coll-2">
+                                      <div className="txt-form">Email<span>:</span></div>
+                                      <label className="email">
+                                        <input type="email" value="E-mail*:"/><br/>
+                                        <span className="error">*This is not a valid email address.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="coll-3">
+                                      <div className="txt-form">phone:</div>
+                                      <label className="phone notRequired">
+                                        <input type="tel" value="Phone:"/><br/>
+                                        <span className="error">*This is not a valid phone number.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="clear"></div>
+                                    <div>
+                                      <div className="txt-form">Comment<span>*</span></div>
+                                      <label className="message">
+                                        <textarea>Message*:</textarea><br/>
+                                        <span className="error">*The message is too short.</span> <span className="empty">*This field is required.</span> </label>
+                                    </div>
+                                    <div className="clear"></div>
+                                  </fieldset>
+                                  <div className="buttons-wrapper clearfix"><a href="#" className="btn-link btn-link2" data-type="submit">submit<span></span></a><strong>*REQUIRED FIELDS</strong></div>
+                                </form>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+  });
+
+  var Privacy = React.createClass({
+    render(){
+        return (
+            <div id="content">
+                {/*--==============================row9=================================--*/}
+                <div className="row_9">
+                    <div className="container">
+                        <div className="row privacy_page">
+                            <div className="col-lg-4 col-md-4 col-sm-4">
+                                <h2>Terms Of Use</h2>
+                                <p>This page is informational purposes. For more information or to book an appointment, please send me an email.</p>
+                                {/* <p>Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultri cies pharetra magna. Donec accumsan male suada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                                <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, Ut tellus dolor, dapibus cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p> */}
+                            </div>
+                            <div className="col-lg-8 col-md-8 col-sm-8">
+                                <h2>Privacy Policy</h2>
+                                <h3>I will <u>never</u> share or sell information provided to me.</h3>
+                                {/* <p className="m_bot4">Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.</p>
+                                <h3>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</h3>
+                                <p>Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim.</p>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor.</p> */}
+                                <p>E-mail: <a href="mailto:ivong2000@gmail.com?subject=Mail from your website" className="btn-link btn-link3"><span></span>ivong2000@gmail.com</a></p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+  });
+
+
+  var App = React.createClass({
+    render(){
+      return (
+        <div>
+            <header id="header">
+              <div className="container">
+                <h1 className="navbar-brand navbar-brand_"><Link to="/"><img alt="" src="img/logo_white.png" /></Link></h1>
+              </div>
+              <div className="menuheader">
+                  <div className="container">
+                    <nav className="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                        <ul className="nav sf-menu">
+                          <li className="active"><Link to="/">home</Link></li>
+                          <li><Link to="bio">about me</Link></li>
+                          <li><a href="gallery.html">gallery</a></li>
+                          {/* <li><Link to="links">links</Link></li> */}
+                          <li><Link to="location">location</Link></li>
+                        </ul>
+                    </nav>
+                  </div>
+              </div>
+            </header>
+            <div className="contents">
+                {this.props.children}
+            </div>
+            <footer>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-4 col-sm-4 footercol">
+                            <ul className="social_icons clearfix">
+                                 <li><a href="https://www.facebook.com/ivonhernandezgarcia1/" target="_blank"><img src="img/follow_icon1.png" alt="" /></a></li>
+                                 <li><a href="https://plus.google.com/116457184508702826964" target="_blank"><img src="img/follow_icon2.png" alt="" /></a></li>
+                                 {/*<li><a href="#"><img src="img/follow_icon3.png" alt="" /></a></li>
+                                 <li><a href="#"><img src="img/follow_icon4.png" alt="" /></a></li>*/}
+                            </ul>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                            <Link to="/" className="smalllogo2 logo"><img src="img/logo_white.png" alt="" /></Link>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-4 footercol">
+                            <p className="footerpriv">&copy; 2017 &bull; <Link to="privacy" className="privacylink">Privacy policy</Link></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        )
+      }
+    });
+
+    ReactDOM.render(
+      <Router history={hashHistory}>
+        <Route path="/" component={App} >
+            <IndexRoute component={Home} />
+            <Route path="bio" component={Bio} />
+            {/* <Route path="gallery" component={Gallery} /> */}
+            <Route path="links" component={Links} />
+            <Route path="location" component={Location} />
+            <Route path="privacy" component={Privacy} />
+        </Route>
+      </Router>,
+      document.getElementById("container")
+      );
+  </script>
+</body>
+</html>
